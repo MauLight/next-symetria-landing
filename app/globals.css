@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-sym-border: #292929;
+  --color-sym-card: #080808;
+  --color-sym-text-primary: #ededed;
+  --color-sym-text-secondary: #a1a1a1;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
