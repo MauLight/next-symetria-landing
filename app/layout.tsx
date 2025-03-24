@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
+import IphoneCase from "./components/iphone-case";
+import MobileMenu from "./components/mobile-menu";
 
 export const metadata: Metadata = {
   title: "Symetria",
@@ -16,6 +18,11 @@ export default function RootLayout({
       <body
         className=''
       >
+        <IphoneCase size="sm">
+          <div className="w-full h-full rounded-[15px]">
+            <MobileMenu />
+          </div>
+        </IphoneCase>
         {children}
       </body>
     </html>
