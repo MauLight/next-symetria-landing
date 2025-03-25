@@ -9,6 +9,7 @@ import CartHub from './cart-hub'
 import { ReactTyped } from "react-typed"
 import { motion } from 'motion/react'
 import Image from 'next/image'
+import { Spinner } from './spinner'
 
 interface ListItem {
     title: string
@@ -62,8 +63,13 @@ const childVariants = {
 
 export default function MobileMenu({ theme }: { theme: string }) {
 
+    //* Controls hamburger state
     const [isOpen, setOpen] = useState(false)
+    //* Controls spinner state
+    const [searching, setSearching] = useState(false)
+    //* Controls dropdown list state
     const [openList, setOpenList] = useState(false)
+    //* Controls cycling through list values by index (starts at 4 which is outside the index)
     const [highlightedItem, setHighlightedItem] = useState<number>(4)
 
     //* Control rendering of second screen, individual product.
@@ -72,6 +78,10 @@ export default function MobileMenu({ theme }: { theme: string }) {
 
     function handleAfterType() {
         setTimeout(() => {
+            setSearching(true)
+        }, 500)
+        setTimeout(() => {
+            setSearching(false)
             setOpenList(true)
             setTimeout(() => {
                 setHighlightedItem(0)
@@ -82,7 +92,7 @@ export default function MobileMenu({ theme }: { theme: string }) {
                     }, 1000)
                 }, 2000)
             }, 1000)
-        }, 1000)
+        }, 1500)
     }
 
     function handleResetAnimation() {
@@ -193,6 +203,14 @@ export default function MobileMenu({ theme }: { theme: string }) {
                                 <MagnifyingGlassIcon className='absolute top-2 text-[#3e3e3e] group-hover:text-[#ededed] left-2 w-6 h-6 transition-color duration-300' />
 
                                 <ReactTyped className={`absolute top-2 left-10 text-[1rem] text-balance text-sym-text-primary`} startDelay={1200} strings={['Nothing earbuds']} typeSpeed={20} onComplete={handleAfterType} />
+
+                                {
+                                    searching && (
+                                        <div className='absolute top-3 right-2 text-white h-5'>
+                                            <Spinner className='' />
+                                        </div>
+                                    )
+                                }
 
                                 {
                                     openList && (
