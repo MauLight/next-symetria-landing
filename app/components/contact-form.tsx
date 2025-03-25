@@ -166,7 +166,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                             !hasError && (
                                 <>
                                     <div className="px-8 pt-8">
-                                        <p className="text-lg text-white">{status === "idle" || status === "saving" ? "Let's Connect" : 'Thank you.'}</p>
+                                        <p className="text-lg text-sym-text-primary">{status === "idle" || status === "saving" ? "Let's Connect" : 'Thank you.'}</p>
                                     </div>
 
                                     <motion.div
@@ -187,7 +187,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                                                             onSubmit={handleSubmitRecaptcha}
                                                             className=""
                                                         >
-                                                            <p className="text-sm text-zinc-400">
+                                                            <p className="text-sm text-sym-text-secondary">
                                                                 {`Enter your email and we'll get in contact with you:`}
                                                             </p>
                                                             <div className="mt-3">
@@ -207,7 +207,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                                                                 />
                                                             </div>
                                                             <div className="mt-8 text-right">
-                                                                <Form.Button className="rounded bg-indigo-500 px-5 py-2 text-[1rem] text-white ">
+                                                                <Form.Button className="rounded bg-indigo-500 px-5 py-2 text-[1rem] text-sym-text-primary">
                                                                     Contact me
                                                                 </Form.Button>
                                                             </div>
