@@ -35,7 +35,7 @@ export const Modal = ({ children, openModal, theme }: ModalProps): ReactElement 
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.88 }}
               transition={{ duration: 0.2 }}
-              className={`absolute top-0 -left-1 ${theme === 'dark' ? 'bg-black' : 'bg-[#ededed]'} w-full h-full z-0`}></motion.div>
+              className={`absolute top-0 ${theme === 'dark' ? 'bg-black -left-1' : 'bg-[#ededed] left-0'} w-full h-full z-0`}></motion.div>
 
           </div>
         )

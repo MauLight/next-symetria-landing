@@ -15,7 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-black'>
-        <MarketplaceApp />
+        <section className="w-full flex justify-center">
+          <div className="w-full max-w-[1440px]">
+            <MarketplaceApp />
+          </div>
+        </section>
         {children}
       </body>
     </html>
