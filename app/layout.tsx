@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
-import IphoneCase from "./components/iphone-case";
-import MobileMenu from "./components/mobile-menu";
+import MarketplaceApp from "./ui/marketplaceApp";
 
 export const metadata: Metadata = {
   title: "Symetria",
@@ -15,14 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className=''
-      >
-        <IphoneCase size="sm">
-          <div className="w-full h-full rounded-[15px]">
-            <MobileMenu />
-          </div>
-        </IphoneCase>
+      <body className='bg-black'>
+        <MarketplaceApp />
         {children}
       </body>
     </html>
