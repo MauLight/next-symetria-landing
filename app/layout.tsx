@@ -62,7 +62,7 @@ export default function RootLayout({
                         {
                           item.icon
                         }
-                        <h1 className="text-sym-text-primary text-[3.2rem]">{item.title}</h1>
+                        <h1 className="text-sym-text-primary tracking-tight font-sym-title text-[3.2rem]">{item.title}</h1>
                       </div>
                       <p className="text-sym-text-secondary text-[1.4rem] text-balance">{item.desc}</p>
                     </div>
