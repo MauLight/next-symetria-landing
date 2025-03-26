@@ -1,10 +1,11 @@
-import { Metadata } from "next";
-import "./globals.css";
-import MarketplaceApp from "./ui/marketplaceApp";
-import Techstack from "./ui/techstack";
-import { ChevronDownIcon, CurrencyDollarIcon, EyeIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
-import AwarenessText from "./ui/awareness-text";
-import Hero from "./ui/hero";
+import { Metadata } from "next"
+import "./globals.css"
+import MarketplaceApp from "./ui/marketplaceApp"
+import Techstack from "./ui/techstack"
+import { CurrencyDollarIcon, EyeIcon, RocketLaunchIcon } from "@heroicons/react/24/outline"
+import AwarenessText from "./ui/awareness-text"
+import Hero from "./ui/hero"
+import DeveloperHub from "./ui/developerHub"
 
 export const metadata: Metadata = {
   title: "Symetria",
@@ -43,11 +44,20 @@ export default function RootLayout({
       <body className='bg-black pb-22'>
         <Hero />
 
-        <div className='w-full z-10 h-[200px] flex justify-center items-start py-10 mb-[200px]'>
-          <ChevronDownIcon className="w-8 h-8 text-sym-text-primary animate-pulse" />
-        </div>
-
         <AwarenessText />
+
+        <DeveloperHub />
+
+        <div className="h-[100px]"></div>
+
+        {/* Superior design part */}
+        <section className="w-full flex justify-center">
+          <div className="w-full max-w-[1440px]">
+            <MarketplaceApp />
+          </div>
+        </section>
+
+        <div className="h-[100px]"></div>
 
         {/* Key points; Access, Optimize and Stand Out */}
         <div className="relative">
@@ -89,13 +99,6 @@ export default function RootLayout({
         </div>
 
         <div className="h-[200px]"></div>
-
-        {/* Superior design part */}
-        <section className="w-full flex justify-center">
-          <div className="w-full max-w-[1440px]">
-            <MarketplaceApp />
-          </div>
-        </section>
 
         {children}
       </body>

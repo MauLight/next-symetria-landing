@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AwarenessText() {
     return (
-        <div className='flex h-screen flex-col justify-start gap-y-10'>
+        <div className='flex h-[600px] flex-col justify-center gap-y-10'>
             <div className='w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'>
 
                 <div className="hidden md:flex col-span-1 lg:col-span-2"></div>

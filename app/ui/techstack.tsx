@@ -9,7 +9,7 @@ export default function Techstack({ direction }: { direction: 'left' | 'right' }
             <div
                 className='w-full h-full flex justify-center items-center'>
                 <ParallaxText initialDirection={direction} baseVelocity={-10}>
-                    symetria
+                    ctlst ctlst
                 </ParallaxText>
             </div>
         </div>

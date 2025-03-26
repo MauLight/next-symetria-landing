@@ -48,6 +48,7 @@ export default function MarketplaceApp() {
             initial='hidden'
             animate='visible'
             className='w-full h-screen flex justify-around gap-x-5'>
+
             <div className='w-full flex items-center'>
                 <div className='w-full h-[calc(735px/1.2)] flex flex-col gap-y-10 justify-start px-10'>
                     <div className='flex flex-col gap-y-2'>
@@ -64,14 +65,19 @@ export default function MarketplaceApp() {
                                     variants={childVariants}
                                     initial='hidden'
                                     animate='visible'
-                                    className='flex gap-x-4 items-center'><div className={`w-2 h-2 ${animatedGradient} rounded-full`}>
-                                        <div className='w-full h-full scale-[92%] rounded-full bg-black'></div>
-                                    </div>{point.text}</motion.li>
+                                    className='flex gap-x-4 items-center'>
+                                    <div className={`w-2 h-2 ${animatedGradient} rounded-full`}>
+                                        <div className='w-full h-full scale-[92%] rounded-full bg-black' />
+                                    </div>
+                                    {point.text}
+                                </motion.li>
                             ))
                         }
                     </motion.ul>
                 </div>
             </div>
+
+
             <div className='w-full flex justify-center gap-x-5'>
 
                 <IphoneCase theme={theme} size="sm">
@@ -88,6 +94,7 @@ export default function MarketplaceApp() {
                         <SunIcon className='w-6 h-6 text-sym-text-secondary hover:text-indigo-500 transition-color duration-300' />
                     </button>
                 </div>
+
             </div>
 
         </motion.div>
