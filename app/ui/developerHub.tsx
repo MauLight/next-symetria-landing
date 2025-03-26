@@ -51,6 +51,7 @@ export default function DeveloperHub() {
                 <div className='flex flex-col items-center gap-y-2'>
                     <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} text-[4rem]`}>Performant Development</h1>
                     <p className='text-sym-text-secondary text-[1.3rem] text-balance w-full max-w-[900px]'>Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.</p>
+                    <p className='text-sym-text-secondary text-[1.3rem] text-balance w-full max-w-[900px]'>WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance.</p>
                 </div>
             </div>
         </section>

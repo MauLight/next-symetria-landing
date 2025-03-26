@@ -6,6 +6,8 @@ import { CurrencyDollarIcon, EyeIcon, RocketLaunchIcon } from "@heroicons/react/
 import AwarenessText from "./ui/awareness-text"
 import Hero from "./ui/hero"
 import DeveloperHub from "./ui/developerHub"
+import BrandsList from "./components/brandsList"
+import StackList from "./components/stackList"
 
 export const metadata: Metadata = {
   title: "Symetria",
@@ -42,10 +44,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-black pb-22'>
+        {/* Hero part */}
         <Hero />
 
+        {/* Awareness part */}
         <AwarenessText />
 
+        {/* Performant development part */}
         <DeveloperHub />
 
         <div className="h-[100px]"></div>
@@ -58,6 +63,16 @@ export default function RootLayout({
         </section>
 
         <div className="h-[100px]"></div>
+
+        <div className="flex flex-col gap-y-44">
+
+          <StackList />
+
+          <BrandsList />
+
+        </div>
+
+        <div className="h-[300px]"></div>
 
         {/* Key points; Access, Optimize and Stand Out */}
         <div className="relative">
