@@ -22,7 +22,7 @@ export default function Hero() {
                             animate={{ opacity: 1, scale: 1, transition: { duration: 1, ease: 'easeOut' } }}
                         >
                             <h1 className={`w-full font-sym-title ${animatedGradientText} text-[22rem] leading-none tracking-tighter`}>
-                                Ctlst<small className="text-[5rem]">.</small>
+                                Ctlst<small className="text-[10rem]">.</small>
                             </h1>
                         </motion.div>
 

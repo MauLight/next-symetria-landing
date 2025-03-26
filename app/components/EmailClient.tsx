@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
-import { useEffect, useState, type ReactNode } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState, type ReactNode } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { ArchiveBoxIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 
@@ -22,7 +22,7 @@ const titles = [
     ["New Features Just Dropped!", "Explore our latest update and supercharge your workflow"]
 ]
 
-function EmailClient({ theme }: { theme: string }): ReactNode {
+function EmailClient({ theme, setSliderStep }: { theme: string, setSliderStep: Dispatch<SetStateAction<number>> }): ReactNode {
     const [messages, setMessages] = useState([...Array(1).keys()])
     const [selectedMessages, setSelectedMessages] = useState<number[]>([])
     const [finishAnimation, setFinishAnimation] = useState<boolean>(false)
@@ -85,6 +85,9 @@ function EmailClient({ theme }: { theme: string }): ReactNode {
         if (finishAnimation) {
             archiveMessages()
             setPressButton(false)
+            setTimeout(() => {
+                setSliderStep(2)
+            }, 1000)
         }
     }, [finishAnimation])
 
