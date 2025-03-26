@@ -8,6 +8,7 @@ import Hero from "./ui/hero"
 import DeveloperHub from "./ui/developerHub"
 import BrandsList from "./components/brandsList"
 import StackList from "./components/stackList"
+import ServicesList from "./components/servicesList"
 
 export const metadata: Metadata = {
   title: "Symetria",
@@ -64,6 +65,10 @@ export default function RootLayout({
 
         <div className="h-[100px]"></div>
 
+        <ServicesList />
+
+        <div className="h-[100px]"></div>
+
         <div className="flex flex-col gap-y-44">
 
           <StackList />
@@ -81,7 +86,7 @@ export default function RootLayout({
             <div className="w-[1440px] h-[600px] grid grid-cols-3 gap-x-10">
               {
                 cardsText.map((item) => (
-                  <div key={item.id} className="col-span-1 w-full h-full flex flex-col justify-between py-12 px-10 bg-black rounded-[6px]">
+                  <div key={item.id} className="col-span-1 w-full h-full flex flex-col justify-between py-12 px-10 bg-black rounded-[25px] border border-sym-border">
                     <div className="flex flex-col gap-y-5">
                       <div className="flex items-center gap-x-5">
                         {
