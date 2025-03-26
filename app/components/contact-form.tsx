@@ -11,8 +11,6 @@ import { Agent, randRange } from '../classes'
 
 const recaptchaSiteKey = process.env.NEXT_PUBLIC_GRECAPTCHA
 
-console.log(recaptchaSiteKey)
-
 interface GoogleReCaptcha {
     execute: (siteKey: string, options: { action: string }) => Promise<string>
     ready: (callback: () => void) => void
@@ -130,7 +128,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                     ctx.moveTo(agent.pos.x, agent.pos.y)
                     ctx.lineTo(other.pos.x, other.pos.y)
                     ctx.stroke()
-                    ctx.strokeStyle = '#6366F1'
+                    ctx.strokeStyle = '#a9a9a9'
                 }
             }
 

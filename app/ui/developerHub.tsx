@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import IpadCase from '../components/ipad-case'
 import EmailClient from '../components/EmailClient'
 import { animatedGradientText } from '../styles'
@@ -11,10 +11,6 @@ export default function DeveloperHub() {
 
     const [theme] = useState<'dark' | 'light'>('dark')
     const [sliderStep, setSliderStep] = useState<number>(1)
-
-    useEffect(() => {
-        console.log(sliderStep, 'The Step')
-    }, [sliderStep])
 
     return (
         <section className="relative w-full flex justify-center overflow-hidden">
