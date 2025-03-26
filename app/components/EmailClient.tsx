@@ -92,7 +92,7 @@ function EmailClient({ theme, setSliderStep }: { theme: string, setSliderStep: D
     }, [finishAnimation])
 
     return (
-        <div className="flex w-full h-full scale-[95%]">
+        <div className="flex w-full h-full">
             <div className={`mx-auto h-full flex w-full flex-1 overflow-hidden rounded-[12px] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
                 <div className={`flex w-[45%] flex-col py-2 ${theme === 'dark' ? 'bg-sym-card' : 'bg-slate-50'}`}>
 
