@@ -1,12 +1,12 @@
 'use client'
 
-import { Agent } from 'http'
 import { animatedGradientText } from '../styles'
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ReactTyped } from 'react-typed'
 import useMeasure from 'react-use-measure'
 import { ModularAgent, randRange } from '../classes'
+import { CursorArrowRippleIcon } from '@heroicons/react/24/outline'
 
 const containerVariants = {
     initial: {},
@@ -67,7 +67,7 @@ export default function ServicesList() {
                     const dist = agent.pos.getDistance(other.pos)
 
                     //* Number indicates the max distance between two points to hold a line between them.
-                    if (dist > 250) continue
+                    if (dist > 200) continue
 
                     ctx.lineWidth = 1 - dist / 200
                     ctx.beginPath()
@@ -98,6 +98,10 @@ export default function ServicesList() {
         <div className="w-full h-screen flex flex-col justify-start items-center gap-y-20">
             <div className="w-full max-w-[1440px]">
                 <h1 className={`text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} text-[4rem]`}>Our Services</h1>
+                <div className="flex items-center gap-x-2">
+                    <CursorArrowRippleIcon className='w-5 h-5 text-green-500' />
+                    <p className='text-sym-text-secondary text-[1rem]'>{'Hover over the options to see details.'}</p>
+                </div>
             </div>
             <div className="w-full h-1/2 max-w-[1440px] grid grid-cols-3 items-center gap-x-10">
                 {
