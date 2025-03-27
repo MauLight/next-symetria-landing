@@ -2,13 +2,13 @@
 
 import useMeasure from "react-use-measure";
 import ContactForm from "./components/contact-form";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 export default function Home() {
 
   const [ref, bounds] = useMeasure()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!document.querySelector('#recaptcha-script')) {
       const script = document.createElement('script');
       script.id = 'recaptcha-script';

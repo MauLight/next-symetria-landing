@@ -236,7 +236,13 @@ export default function ServicesList() {
                             </div>
                             <motion.div
                                 variants={childVariants}
-                                className={`absolute top-0 w-full h-full bg-indigo-500 z-20`}></motion.div>
+                                className={`absolute top-0 w-full h-full flex justify-center items-center bg-indigo-500 z-20`}>
+                                <motion.p
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1, delay: 2 }}
+                                    className='w-[190px] text-sym-text-primary text-[0.6rem] pt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illo nobis mollitia consequuntur nostrum ad magni. Ipsam quasi ullam dolore? Aliquid voluptate quas voluptatibus saepe consequatur. Laudantium vero corrupti expedita!</motion.p>
+                            </motion.div>
                         </motion.div>
                     ))
                 }
