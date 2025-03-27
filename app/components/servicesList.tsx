@@ -18,6 +18,22 @@ const childVariants = {
     hover: { opacity: 1, scale: 2, borderRadius: '100%', transition: { duration: 0.5 } }
 }
 
+const uiVariants = {
+    initial: { opacity: 0 },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            staggerChildren: 0.3
+        }
+    }
+}
+
+const childUiVariants = {
+    initial: { scaleX: 0 },
+    animate: { scaleX: 1, transition: { duration: 0.5 } }
+}
+
 const services = [
     {
         id: 'a1',
@@ -38,6 +54,8 @@ const services = [
 
 export default function ServicesList() {
 
+    const [uiUxAnimate, setUiUxAnimate] = useState<string>('animate')
+
     //* Canvas state, calculate width using bounds.
     const [ref, bounds] = useMeasure()
     const [width] = useState(bounds.width > 0 ? bounds.width : 2000)
@@ -46,7 +64,7 @@ export default function ServicesList() {
     const agents: ModularAgent[] = []
 
     //* Number of iterations equals number of dots on screen.
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 60; i++) {
         const x = randRange(0, width)
         const y = randRange(0, height)
         agents.push(new ModularAgent(x, y))
@@ -67,7 +85,7 @@ export default function ServicesList() {
                     const dist = agent.pos.getDistance(other.pos)
 
                     //* Number indicates the max distance between two points to hold a line between them.
-                    if (dist > 200) continue
+                    if (dist > 300) continue
 
                     ctx.lineWidth = 1 - dist / 200
                     ctx.beginPath()
@@ -93,6 +111,17 @@ export default function ServicesList() {
         return () => ctx.clearRect(0, 0, width, height)
     })
 
+    useEffect(() => {
+        if (uiUxAnimate === 'initial') {
+            setTimeout(() => {
+                setUiUxAnimate('animate')
+            }, 1000)
+        } else {
+            setTimeout(() => {
+                setUiUxAnimate('initial')
+            }, 5000)
+        }
+    }, [uiUxAnimate])
 
     return (
         <div className="w-full h-screen flex flex-col justify-start items-center gap-y-20">
@@ -114,6 +143,57 @@ export default function ServicesList() {
                             <div className="w-full h-full flex flex-col items-center px-10 py-24 gap-y-5">
                                 <h1 className="text-sym-text-primary z-30 tracking-tight font-sym-title uppercase text-[1.9rem]">{service.service}</h1>
 
+                                {
+                                    service.id === 'c3' && (
+                                        <>
+                                            <div className='absolute top-0 w-full h-full bg-radial from-transparent from-50%  to-black to-90% z-10' />
+                                            <div className='absolute top-0 w-full h-full bg-radial from-transparent from-50%  to-black to-90% z-10' />
+                                            <div className='absolute top-0 w-full h-full bg-radial from-transparent from-50%  to-black to-90% glass z-10' />
+                                            <motion.div
+                                                variants={uiVariants}
+                                                initial='initial'
+                                                animate={uiUxAnimate}
+                                                className='absolute top-0 left-0 w-full h-full flex flex-col'>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-[100px] h-[50px] border border-indigo-500'></motion.div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-[200px] h-[50px] border border-indigo-500'></motion.div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-full h-[50px] border border-indigo-500'></motion.div>
+                                                <div className="flex">
+                                                    <div className='w-full h-[50px] border border-black'></div>
+                                                    <motion.div
+                                                        variants={childUiVariants}
+                                                        className='w-[200px] h-[50px] border border-indigo-500'></motion.div>
+                                                </div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-full h-[50px] border border-indigo-500'></motion.div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-[100px] h-[50px] border border-indigo-500'></motion.div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-[200px] h-[50px] border border-indigo-500'></motion.div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-full h-[50px] border border-indigo-500'></motion.div>
+                                                <div className="flex">
+                                                    <div className='w-full h-[50px] border border-black'></div>
+                                                    <motion.div
+                                                        variants={childUiVariants}
+                                                        className='w-[200px] h-[50px] border border-indigo-500'></motion.div>
+                                                </div>
+                                                <motion.div
+                                                    variants={childUiVariants}
+                                                    className='w-full h-[50px] border border-indigo-500'></motion.div>
+                                            </motion.div>
+                                        </>
+                                    )
+                                }
                                 {
                                     service.id === 'b2' && (
                                         <>

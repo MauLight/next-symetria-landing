@@ -47,7 +47,7 @@ export default function DeveloperHub() {
                     </AnimatePresence>
                 </IpadCase>
             </div>
-            <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[280px] bg-radial from-black from-30% to-transparent to-70%'>
+            <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[300px] bg-radial from-black from-30% to-transparent to-70%'>
                 <div className='flex flex-col items-center gap-y-2'>
                     <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} text-[4rem]`}>Performant Development</h1>
                     <p className='text-sym-text-secondary text-[1.3rem] text-balance w-full max-w-[900px]'>Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.</p>
