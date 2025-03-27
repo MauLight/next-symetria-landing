@@ -162,7 +162,7 @@ export default function ServicesList() {
                                                     className='w-[200px] h-[50px] border border-indigo-500'></motion.div>
                                                 <motion.div
                                                     variants={childUiVariants}
-                                                    className='w-full h-[50px] border border-indigo-500'></motion.div>
+                                                    className='w-full h-[100px] border border-indigo-500'></motion.div>
                                                 <div className="flex">
                                                     <div className='w-full h-[50px] border border-black'></div>
                                                     <motion.div
@@ -174,7 +174,7 @@ export default function ServicesList() {
                                                     className='w-full h-[50px] border border-indigo-500'></motion.div>
                                                 <motion.div
                                                     variants={childUiVariants}
-                                                    className='w-[100px] h-[50px] border border-indigo-500'></motion.div>
+                                                    className='w-[100px] h-[100px] border border-indigo-500'></motion.div>
                                                 <motion.div
                                                     variants={childUiVariants}
                                                     className='w-[200px] h-[50px] border border-indigo-500'></motion.div>
