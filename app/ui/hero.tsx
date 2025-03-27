@@ -9,7 +9,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline"
 export default function Hero() {
 
     return (
-        <main className="h-screen flex flex-col relative">
+        <main className="h-screen flex flex-col relative overflow-hidden">
             <div className="w-full h-full flex justify-center z-20">
 
                 <section className="w-full max-w-[1440px] flex flex-col justify-center items-start gap-x-10">
@@ -56,6 +56,7 @@ export default function Hero() {
                 <ChevronDownIcon className="w-8 h-8 text-sym-text-primary animate-pulse" />
             </div>
 
+            <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-gradient-to-t from-black  to-transparent to-30% opacity-90'></div>
             <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-radial from-transparent  to-black opacity-20'></div>
             <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-radial from-transparent  to-black'></div>
             <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-radial from-transparent  to-black'></div>

@@ -9,6 +9,7 @@ import DeveloperHub from "./ui/developerHub"
 import BrandsList from "./components/brandsList"
 import StackList from "./components/stackList"
 import ServicesList from "./components/servicesList"
+import ScrollButton from "./components/ScrollButton"
 
 export const metadata: Metadata = {
   title: "Symetria",
@@ -96,7 +97,7 @@ export default function RootLayout({
                       </div>
                       <p className="text-sym-text-secondary text-[1.4rem] text-balance">{item.desc}</p>
                     </div>
-                    <button className="h-10 px-2 border border-sym-border hover:border-green-500 rounded-[6px] text-sym-text-primary hover:text-green-500 transition-color duration-300 capitalize animate-pulse hover:animate-none">Tell me More</button>
+                    <ScrollButton />
                   </div>
                 ))
               }

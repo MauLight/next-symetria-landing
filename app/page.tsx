@@ -19,7 +19,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="w-full" ref={ref}>
+    <div id="scrollTarget" className="w-full" ref={ref}>
       <ContactForm parent={bounds} />
     </div>
   );

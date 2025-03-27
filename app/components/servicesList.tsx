@@ -7,6 +7,7 @@ import { ReactTyped } from 'react-typed'
 import useMeasure from 'react-use-measure'
 import { ModularAgent, randRange } from '../classes'
 import { CursorArrowRippleIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-scroll'
 
 const containerVariants = {
     initial: {},
@@ -38,17 +39,20 @@ const services = [
     {
         id: 'a1',
         service: 'Modular Saas',
-        description: ''
+        subHeader: 'Beautiful, reliable, and ready to use',
+        description: 'Build your ideal app by selecting from a marketplace of pre-built microservices—complete with UI and backend logic. Choose only what you need, integrate seamlessly, and pay less with our discounted modular pricing.'
     },
     {
         id: 'b2',
         service: 'Software Development',
-        description: ''
+        subHeader: 'Unique, efficient, and scalable',
+        description: 'On-demand software development that is efficient, scalable, and tailored to your specific industry. Whether you’re looking to embrace digital transformation or optimize processes, we have the right solution for you.'
     },
     {
         id: 'c3',
         service: 'Ui/Ux Design',
-        description: ''
+        subHeader: 'Eye-catching, confident, and accessible',
+        description: 'Stunning interface designs that blend aesthetics, functionality, and accessibility. Our premium experiences not only enhance retention and conversions but also elevate your brand’s confidence.'
     },
 ]
 
@@ -139,9 +143,22 @@ export default function ServicesList() {
                             variants={containerVariants}
                             initial='initial'
                             whileHover='hover'
-                            key={`id-${service.id}`} className="relative overflow-hidden col-span-1 h-full border border-sym-border hover:border-indigo-500 transition-color duration-300 ease-out rounded-[25px]">
-                            <div className="w-full h-full flex flex-col items-center px-10 py-24 gap-y-5">
-                                <h1 className="text-sym-text-primary z-30 tracking-tight font-sym-title uppercase text-[1.9rem]">{service.service}</h1>
+                            key={`id-${service.id}`} className="relative group overflow-hidden col-span-1 h-full border border-sym-border hover:border-indigo-500 transition-color duration-300 ease-out rounded-[25px]">
+                            <div className="w-full h-full flex flex-col items-center justify-between transition-all duration-300 px-10 py-20 gap-y-5">
+                                <div className='z-30'>
+                                    <h1 className="text-sym-text-primary tracking-tight font-sym-title uppercase text-[1.9rem]">{service.service}</h1>
+                                    <h1 className="text-gray-300 group-hover:text-transparent transition-all duration-300 tracking-tight text-[1.3rem]">{service.subHeader}</h1>
+                                </div>
+
+                                <Link
+                                    to="scrollTarget"
+                                    smooth={true}
+                                    duration={1000}
+                                    className="z-30"
+                                >
+                                    <button className='h-10 rounded-[6px] border border-green-500 group-hover:border-sym-text-primary px-4 group-hover:text-sym-text-primary text-green-500 cursor-pointer'>Tell me more</button>
+                                </Link>
+
 
                                 {
                                     service.id === 'c3' && (
@@ -236,12 +253,12 @@ export default function ServicesList() {
                             </div>
                             <motion.div
                                 variants={childVariants}
-                                className={`absolute top-0 w-full h-full flex justify-center items-center bg-indigo-500 z-20`}>
+                                className={`absolute top-0 w-full h-full flex justify-center items-center bg-indigo-500 pb-5 z-20`}>
                                 <motion.p
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{ duration: 1, delay: 2 }}
-                                    className='w-[190px] text-sym-text-primary text-[0.6rem] pt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illo nobis mollitia consequuntur nostrum ad magni. Ipsam quasi ullam dolore? Aliquid voluptate quas voluptatibus saepe consequatur. Laudantium vero corrupti expedita!</motion.p>
+                                    transition={{ duration: 0.5 }}
+                                    className='w-[190px] text-sym-text-primary text-[0.6rem]'>{service.description}</motion.p>
                             </motion.div>
                         </motion.div>
                     ))
