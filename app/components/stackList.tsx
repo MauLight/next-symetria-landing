@@ -34,6 +34,10 @@ const stack = [
     },
 ]
 
+const text = {
+    first: 'Our Stack'
+}
+
 export default function StackList() {
     return (
         <motion.div
@@ -41,7 +45,7 @@ export default function StackList() {
             initial='hidden'
             animate='visible'
             className="w-full flex flex-col items-center gap-y-5">
-            <h1 className="text-[2rem] text-sym-text-primary">Our Stack</h1>
+            <h1 className="text-[2rem] text-sym-text-primary">{text.first}</h1>
             <div className="w-full max-w-[700px] flex items-center justify-around">
                 {
                     stack.map((item) => (

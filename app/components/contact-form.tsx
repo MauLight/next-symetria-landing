@@ -154,7 +154,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
         <MotionConfig transition={transition}>
             <div className="relative w-full h-[700px] flex flex-col items-start pt-44 px-5">
                 <div className="mx-auto w-full max-w-md z-20">
-                    <div className="rounded-2xl border border-sym-border bg-sym-card overflow-hidden">
+                    <div className="rounded-[25px] border border-sym-border bg-sym-card overflow-hidden">
                         {
                             hasError && (
                                 <ErrorComponent theme='dark' />

@@ -35,6 +35,12 @@ const childUiVariants = {
     animate: { scaleX: 1, transition: { duration: 0.5 } }
 }
 
+const text = {
+    first: 'Our Services',
+    second: 'Hover over the options to see details.',
+    third: 'Tell me more'
+}
+
 const services = [
     {
         id: 'a1',
@@ -130,10 +136,10 @@ export default function ServicesList() {
     return (
         <div className="w-full md:h-screen flex flex-col justify-start items-center gap-y-20 max-md:px-5 max-md:pb-20">
             <div className="w-full max-w-[1440px]">
-                <h1 className={`max-md:w-full text-center md:text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>Our Services</h1>
+                <h1 className={`max-md:w-full text-center md:text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>{text.first}</h1>
                 <div className="flex max-md:justify-center items-center gap-x-2">
                     <CursorArrowRippleIcon className='w-5 h-5 text-green-500' />
-                    <p className='text-sym-text-secondary text-[1rem]'>{'Hover over the options to see details.'}</p>
+                    <p className='text-sym-text-secondary text-[1rem]'>{text.second}</p>
                 </div>
             </div>
             <div className="w-full md:h-1/2 max-w-[1440px] grid md:grid-cols-3 items-center max-md:gap-y-10 md:gap-x-10">
@@ -156,7 +162,7 @@ export default function ServicesList() {
                                     duration={1000}
                                     className="z-30"
                                 >
-                                    <button className='h-10 rounded-[6px] border border-green-500 group-hover:border-sym-text-primary px-4 group-hover:text-sym-text-primary text-green-500 cursor-pointer'>Tell me more</button>
+                                    <button className='h-10 rounded-[6px] border border-green-500 group-hover:border-sym-text-primary px-4 group-hover:text-sym-text-primary text-green-500 cursor-pointer capitalize'>{text.third}</button>
                                 </Link>
 
 

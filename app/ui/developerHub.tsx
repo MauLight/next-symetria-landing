@@ -7,6 +7,12 @@ import { animatedGradientText } from '../styles'
 import { AnimatePresence, motion } from 'motion/react'
 import Multistep from '../components/Multistep'
 
+const text = {
+    first: 'Performant Development',
+    second: 'Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.',
+    third: 'WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance.'
+}
+
 export default function DeveloperHub() {
 
     const [theme] = useState<'dark' | 'light'>('dark')
@@ -49,9 +55,9 @@ export default function DeveloperHub() {
             </div>
             <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[280px] bg-radial from-black from-30% to-transparent mdto-70%'>
                 <div className='max-md:w-full flex flex-col items-center gap-y-10 md:gap-y-2'>
-                    <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>Performant Development</h1>
-                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] text-center text-balance w-full max-w-[900px] pt-5'>Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.</p>
-                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] text-center text-balance w-full max-w-[900px]'>WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance.</p>
+                    <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>{text.first}</h1>
+                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] text-center text-balance w-full max-w-[900px] pt-5'>{text.second}</p>
+                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] text-center text-balance w-full max-w-[900px]'>{text.third}</p>
                 </div>
             </div>
         </section>

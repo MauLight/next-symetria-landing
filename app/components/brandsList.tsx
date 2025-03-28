@@ -51,6 +51,10 @@ const brands = [
     },
 ]
 
+const text = {
+    first: 'Trusted by'
+}
+
 export default function BrandsList() {
     const [startAnimation, setStartAnimation] = useState<boolean>(false)
 
@@ -69,7 +73,7 @@ export default function BrandsList() {
             whileInView={startAnimation ? 'visible' : 'hidden'}
             viewport={{ once: true, amount: 0.8 }}
             className="w-full flex flex-col items-center gap-y-5">
-            <h1 className="text-[2rem] text-sym-text-primary">Trusted by</h1>
+            <h1 className="text-[2rem] text-sym-text-primary">{text.first}</h1>
             <div className="w-full max-w-[1440px] flex items-center justify-between max-md:px-5">
                 {
                     brands.map((item) => (
