@@ -130,7 +130,7 @@ export default function MarketplaceApp() {
                     <div className='w-full flex flex-col gap-y-10 justify-start px-10'>
                         <div className='flex flex-col items-center gap-y-2'>
                             <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>Superior Design</h1>
-                            <p className='text-sym-text-secondary max-sm:text-center text-[1rem] sm:text-[1.3rem] text-balance max-sm:pt-5'>With beautiful design, clear layouts, logical workflows, and responsive interactions, we make tasks easier and faster to complete.</p>
+                            <p className='text-sym-text-secondary max-md:text-center text-[1rem] sm:text-[1.3rem] text-balance max-sm:pt-5'>With beautiful design, clear layouts, logical workflows, and responsive interactions, we make tasks easier and faster to complete.</p>
                         </div>
 
                         <motion.ul

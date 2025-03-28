@@ -146,8 +146,8 @@ export default function ServicesList() {
                             key={`id-${service.id}`} className="relative group overflow-hidden col-span-1 md:h-full h-[500px] border border-sym-border hover:border-indigo-500 transition-color duration-300 ease-out rounded-[25px]">
                             <div className="w-full h-full flex flex-col items-center justify-between transition-all duration-300 px-10 py-20 gap-y-5">
                                 <div className='z-30'>
-                                    <h1 className="text-sym-text-primary tracking-tight font-sym-title uppercase text-[1.9rem]">{service.service}</h1>
-                                    <h1 className="text-gray-300 group-hover:text-transparent transition-all duration-300 tracking-tight text-[1.3rem]">{service.subHeader}</h1>
+                                    <h1 className="text-sym-text-primary tracking-tight font-sym-title uppercase text-[1.9rem] md:max-xl:text-[1.5rem] xl:text-[1.9rem]">{service.service}</h1>
+                                    <h1 className="text-gray-300 group-hover:text-transparent transition-all duration-300 tracking-tight md:max-xl:pt-2 text-[1.3rem] md:max-xl:text-[1rem] xl:text-[1.3rem]">{service.subHeader}</h1>
                                 </div>
 
                                 <Link
