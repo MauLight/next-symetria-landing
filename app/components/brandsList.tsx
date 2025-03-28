@@ -70,13 +70,13 @@ export default function BrandsList() {
             viewport={{ once: true, amount: 0.8 }}
             className="w-full flex flex-col items-center gap-y-5">
             <h1 className="text-[2rem] text-sym-text-primary">Trusted by</h1>
-            <div className="w-full max-w-[1440px] flex items-center justify-between">
+            <div className="w-full max-w-[1440px] flex items-center justify-between max-md:px-5">
                 {
                     brands.map((item) => (
                         <motion.div
                             variants={childVariants}
                             key={item.id}>
-                            <Image src={item.img} width={100} height={100} alt="logo" />
+                            <Image className='w-[50px] sm:w-[70px] md:w-[100px]' src={item.img} width={100} height={100} alt="logo" />
                         </motion.div>
                     ))
                 }

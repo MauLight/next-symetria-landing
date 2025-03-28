@@ -24,7 +24,7 @@ export default function IphoneCase({ size = 'md', children, theme }: { size: str
     }
 
     return (
-        <div className='flex justify-center items-center py-20'>
+        <div className='flex justify-center items-center pt-20 pb-5 sm:py-20'>
             <div className={`${iphoneSize} bg-gradient-to-b from-[#292929] to-[#191919] rounded-[25px]`}>
                 <div className='relative w-full h-full scale-x-[98%] scale-y-[99%] bg-black rounded-[22px] overflow-hidden px-1 py-1'>
 

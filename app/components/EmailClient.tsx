@@ -94,7 +94,7 @@ function EmailClient({ theme, setSliderStep }: { theme: string, setSliderStep: D
     return (
         <div className="flex w-full h-full">
             <div className={`mx-auto h-full flex w-full flex-1 overflow-hidden rounded-[12px] ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
-                <div className={`flex w-[45%] flex-col py-2 ${theme === 'dark' ? 'bg-sym-card' : 'bg-slate-50'}`}>
+                <div className={`flex sm:w-[45%] w-full flex-col py-2 ${theme === 'dark' ? 'bg-sym-card' : 'bg-slate-50'}`}>
 
                     {/* Header */}
                     <div className={`border-b px-5 ${theme === 'dark' ? 'border-sym-border' : 'border-gray-300 '}`}>
@@ -175,7 +175,7 @@ function EmailClient({ theme, setSliderStep }: { theme: string, setSliderStep: D
                 </div>
 
                 {/* Body */}
-                <div className={`flex-1 overflow-y-scroll border-l ${theme === 'dark' ? 'border-sym-border' : 'border-gray-300'} px-8 py-8`}>
+                <div className={`max-sm:hidden flex-1 overflow-y-scroll border-l ${theme === 'dark' ? 'border-sym-border' : 'border-gray-300'} px-8 py-8`}>
                     <h1 className={`h-8 rounded ${theme === 'dark' ? 'bg-sym-border' : 'bg-slate-100'} text-2xl font-bold`} />
                     <div className="mt-8 space-y-6">
                         {[...Array(9).keys()].map((i) => (

@@ -13,8 +13,8 @@ export default function DeveloperHub() {
     const [sliderStep, setSliderStep] = useState<number>(1)
 
     return (
-        <section className="relative w-full flex justify-center overflow-hidden">
-            <div className="w-full max-w-[1440px] h-screen flex justify-center items-center">
+        <section className="relative w-full flex justify-center overflow-hidden  max-md:px-5">
+            <div className="w-full max-w-[1440px] h-[1000px] py-20 flex justify-center items-start">
                 <IpadCase>
                     <AnimatePresence>
                         {
@@ -47,11 +47,11 @@ export default function DeveloperHub() {
                     </AnimatePresence>
                 </IpadCase>
             </div>
-            <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[300px] bg-radial from-black from-30% to-transparent to-70%'>
-                <div className='flex flex-col items-center gap-y-2'>
-                    <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} text-[4rem]`}>Performant Development</h1>
-                    <p className='text-sym-text-secondary text-[1.3rem] text-balance w-full max-w-[900px]'>Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.</p>
-                    <p className='text-sym-text-secondary text-[1.3rem] text-balance w-full max-w-[900px]'>WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance.</p>
+            <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[280px] bg-radial from-black from-30% to-transparent mdto-70%'>
+                <div className='max-md:w-full flex flex-col items-center gap-y-10 md:gap-y-2'>
+                    <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>Performant Development</h1>
+                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] max-md:text-center text-balance w-full max-w-[900px]'>Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.</p>
+                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] max-md:text-center text-balance w-full max-w-[900px]'>WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance.</p>
                 </div>
             </div>
         </section>

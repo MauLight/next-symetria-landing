@@ -32,14 +32,14 @@ export const VideoDisplayHorizontal = (): ReactElement => {
   }, [])
 
   return (
-    <div className="relative max-sm:h-[400px] flex justify-center items-center w-screen h-full">
+    <div className="relative flex justify-center items-center w-screen h-full">
       <div className="absolute top-0 left-0 bg-gradient-to-t from -black to-transparent w-full h-full"></div>
       <motion.video
         ref={videoRef}
         src={`/hero_video_${currentVideo}.webm`}
         onEnded={() => { handleSlider(2) }}
         autoPlay={play}
-        muted className='sm:shrink-0 w-full h-full right-0 top-0 object-cover z-10 grayscale opacity-50' />
+        muted className='sm:shrink-0 w-full h-screen  right-0 top-0 object-cover z-10 grayscale opacity-50' />
 
     </div>
   )

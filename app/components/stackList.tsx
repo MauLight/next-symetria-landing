@@ -48,7 +48,7 @@ export default function StackList() {
                         <motion.div
                             variants={childVariants}
                             key={item.id}>
-                            <Image src={item.img} width={100} height={100} alt="logo" />
+                            <Image className='w-[50px] sm:w-[70px] md:w-[100px]' src={item.img} width={100} height={100} alt="logo" />
                         </motion.div>
                     ))
                 }

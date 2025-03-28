@@ -128,22 +128,22 @@ export default function ServicesList() {
     }, [uiUxAnimate])
 
     return (
-        <div className="w-full h-screen flex flex-col justify-start items-center gap-y-20">
+        <div className="w-full md:h-screen flex flex-col justify-start items-center gap-y-20 max-md:px-5 max-md:pb-20">
             <div className="w-full max-w-[1440px]">
-                <h1 className={`text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} text-[4rem]`}>Our Services</h1>
-                <div className="flex items-center gap-x-2">
+                <h1 className={`max-md:w-full text-center md:text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>Our Services</h1>
+                <div className="flex max-md:justify-center items-center gap-x-2">
                     <CursorArrowRippleIcon className='w-5 h-5 text-green-500' />
                     <p className='text-sym-text-secondary text-[1rem]'>{'Hover over the options to see details.'}</p>
                 </div>
             </div>
-            <div className="w-full h-1/2 max-w-[1440px] grid grid-cols-3 items-center gap-x-10">
+            <div className="w-full md:h-1/2 max-w-[1440px] grid md:grid-cols-3 items-center max-md:gap-y-10 md:gap-x-10">
                 {
                     services.map((service) => (
                         <motion.div
                             variants={containerVariants}
                             initial='initial'
                             whileHover='hover'
-                            key={`id-${service.id}`} className="relative group overflow-hidden col-span-1 h-full border border-sym-border hover:border-indigo-500 transition-color duration-300 ease-out rounded-[25px]">
+                            key={`id-${service.id}`} className="relative group overflow-hidden col-span-1 md:h-full h-[500px] border border-sym-border hover:border-indigo-500 transition-color duration-300 ease-out rounded-[25px]">
                             <div className="w-full h-full flex flex-col items-center justify-between transition-all duration-300 px-10 py-20 gap-y-5">
                                 <div className='z-30'>
                                     <h1 className="text-sym-text-primary tracking-tight font-sym-title uppercase text-[1.9rem]">{service.service}</h1>

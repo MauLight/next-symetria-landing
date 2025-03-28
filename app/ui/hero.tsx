@@ -9,7 +9,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline"
 export default function Hero() {
 
     return (
-        <main className="h-screen flex flex-col relative overflow-hidden">
+        <main className="h-screen flex flex-col relative overflow-hidden  max-md:px-5">
             <div className="w-full h-full flex justify-center z-20">
 
                 <section className="w-full max-w-[1440px] flex flex-col justify-center items-start gap-x-10">
@@ -21,8 +21,8 @@ export default function Hero() {
                             initial={{ opacity: 0, scale: 1.2 }}
                             animate={{ opacity: 1, scale: 1, transition: { duration: 1, ease: 'easeOut' } }}
                         >
-                            <h1 className={`w-full font-sym-title ${animatedGradientText} text-[22rem] leading-none tracking-tighter`}>
-                                Ctlst<small className="text-[10rem]">.</small>
+                            <h1 className={`w-full font-sym-title ${animatedGradientText} max-sm:pb-2 text-[5rem] min-[400px]:text-[6rem] sm:text-[12rem] md:text-[15rem] lg:text-[22rem] max-sm:text-center leading-none tracking-tighter`}>
+                                Ctlst<small className="text-[5rem] sm:text-[10rem]">.</small>
                             </h1>
                         </motion.div>
 
@@ -34,7 +34,7 @@ export default function Hero() {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 0.8 }}
                                 className='sm:min-h-[80px] max-sm:flex max-sm:justify-center pl-8'>
-                                <ReactTyped className={`text-[2.5rem] text-balance tracking-normal max-sm:text-center leading-5 sm:leading-8 text-sym-text-primary`} startDelay={800} strings={['If you can imagine it, you can make it real.']} typeSpeed={10} />
+                                <ReactTyped className={`text-[1.3rem] md:text-[2.5rem] max-sm:leading-6 text-balance tracking-normal max-sm:text-center leading-5 sm:leading-8 text-sym-text-primary`} startDelay={800} strings={['If you can imagine it, you can make it real.']} typeSpeed={10} />
                             </motion.div>
 
                             <div className="w-full flex justify-start pl-5">
@@ -44,7 +44,7 @@ export default function Hero() {
                                     transition={{ duration: 0.8, delay: 2.8 }}
                                     className="flex items-center gap-x-2 sm:pr-12 w-[528px]">
 
-                                    <p className='text-[1.2rem] italic px-2 text-balance font-light leading-tight text-sym-text-secondary'>{'Define your online presence with superb design and software that delivers real results.'}</p>
+                                    <p className='text-[1rem] max-sm:text-center sm:text-[1.2rem] italic px-2 text-balance font-light leading-tight text-sym-text-secondary'>{'Define your online presence with superb design and software that delivers real results.'}</p>
                                 </motion.div>
                             </div>
                         </div>
@@ -56,10 +56,10 @@ export default function Hero() {
                 <ChevronDownIcon className="w-8 h-8 text-sym-text-primary animate-pulse" />
             </div>
 
-            <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-gradient-to-t from-black  to-transparent to-30% opacity-90'></div>
-            <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-radial from-transparent  to-black opacity-20'></div>
-            <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-radial from-transparent  to-black'></div>
-            <div className='absolute top-0 left-0 w-full h-[400px] sm:h-full z-10 bg-radial from-transparent  to-black'></div>
+            <div className='absolute top-0 left-0 w-full h-screen z-10 bg-gradient-to-t from-black  to-transparent to-30% opacity-90'></div>
+            <div className='absolute top-0 left-0 w-full h-screen z-10 bg-radial from-transparent  to-black opacity-20'></div>
+            <div className='absolute top-0 left-0 w-full h-screen z-10 bg-radial from-transparent  to-black'></div>
+            <div className='absolute top-0 left-0 w-full h-screen z-10 bg-radial from-transparent  to-black'></div>
             <div className="z-0 absolute top-0 right-0 opacity-60">
                 <VideoDisplayHorizontal />
             </div>
