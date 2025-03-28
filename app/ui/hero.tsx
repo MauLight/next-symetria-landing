@@ -52,7 +52,7 @@ export default function Hero() {
                 </section>
             </div>
 
-            <div className='absolute bottom-0 w-full z-50 py-5 flex justify-center items-start'>
+            <div className='absolute bottom-0 left-0 w-screen z-50 py-5 flex justify-center items-start'>
                 <ChevronDownIcon className="w-8 h-8 text-sym-text-primary animate-pulse" />
             </div>
 
