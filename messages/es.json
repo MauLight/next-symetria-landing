@@ -1,0 +1,70 @@
+{
+  "Hero": {
+    "title": "Ctlst",
+    "subtitle": "Si puedes imaginarlo, puedes hacerlo realidad.",
+    "third": "Define tu presencia online con un diseño magnífico y un software que ofrece resultados reales."
+  },
+  "Awareness": {
+    "first": "Si estás creando la próxima versión de tu software, no sólo quieres que sea más rápida y eficiente, quieres que destaque.",
+    "second": "Quieres una experiencia que sea",
+    "third": "elegante, llamativa,",
+    "fourth": "fluída"
+  },
+  "Developer": {
+    "first": "Desarrollo eficaz",
+    "second": "Nuestras soluciones de software son probadas y aprobadas en su totalidad antes de pasar a producción. Ofrecemos sólidas bases de código desarrolladas por Ctlst para proporcionar soluciones de software robustas, eficientes y escalables.",
+    "third": "WordPress era genial... en 2005. El futuro de la web es React y Next.js, que cuentan con la confianza de las principales marcas del mundo por su velocidad, flexibilidad y rendimiento."
+  },
+  "Design": {
+    "first": "Diseño superior",
+    "second": "Con un diseño atractivo, composiciones claras, flujos de trabajo lógicos e interacciones responsivas, hacemos que las tareas sean más fáciles y rápidas de completar.",
+    "bullet1": "Aumente la retención y el engagement de los usuarios.",
+    "bullet2": "Mejore la productividad y la satisfacción de los usuarios.",
+    "bullet3": "Menos orientación, lo que reduce los gastos de asistencia."
+  },
+  "Services": {
+    "first": "Nuestros servicios",
+    "second": "Deslice el cursor sobre las opciones para ver los detalles.",
+    "third": "Más información",
+    "card1": {
+      "subHeader": "Atractivo, confiable y listo para usar",
+      "description": "Cree su aplicación ideal eligiendo en un mercado de microservicios completos con interfaz de usuario y lógica de backend. Elija lo que necesita, intégrelo sin problemas y pague menos con nuestros precios modulares."
+    },
+    "card2": {
+      "subHeader": "Único, eficaz y escalable",
+      "description": "Desarrollo de software eficiente, escalable y adaptado a su sector específico. Tanto si busca adoptar la transformación digital como optimizar procesos, tenemos la solución adecuada para usted."
+    },
+    "card3": {
+      "subHeader": "Llamativo, seguro y accesible",
+      "description": "Impresionantes diseños de interfaz que combinan estética, funcionalidad y accesibilidad. Nuestras experiencias premium no solo mejoran la retención y las conversiones, sino que también elevan la confianza de su marca."
+    }
+  },
+  "Stack": {
+    "first": "Nuestro Stack"
+  },
+  "Brands": {
+    "first": "Confiado por"
+  },
+  "keyPoints": {
+    "point1": {
+      "title": "Acceso",
+      "description": "Utilice nuestros servicios en una variedad de modelos de pago y paquetes, encuentre los servicios que mejor se adapten a sus necesidades y pague sólo por lo que utilice."
+    },
+    "point2": {
+      "title": "Optimice",
+      "description": "Acelere sus procesos con un software eficaz y fiable. Creamos nuestros servicios utilizando tecnologías de software de vanguardia."
+    },
+    "point3": {
+      "title": "Destaque",
+      "description": "Ofrezca a sus clientes una experiencia satisfactoria con un diseño moderno y una experiencia de usuario impresionante que impulse el compromiso y la retención."
+    },
+    "button": "Más información"
+  },
+  "Form": {
+    "first": "Pongámonos en contacto",
+    "second": "Muchas gracias",
+    "third": "Introduzca su correo electrónico y nos pondremos en contacto con usted:",
+    "fourth": "Contacto",
+    "fifth": "¡Email enviado! Uno de nuestros agentes se pondrá en contacto con usted, que tenga un buen día."
+  }
+}

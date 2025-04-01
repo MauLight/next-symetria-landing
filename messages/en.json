@@ -1,0 +1,70 @@
+{
+  "Hero": {
+    "title": "Ctlst",
+    "subtitle": "If you can imagine it, you can make it real.",
+    "third": "Define your online presence with superb design and software that delivers real results."
+  },
+  "Awareness": {
+    "first": "If you’re building the next version of your software, you don’t just want it to be faster and more efficient—you want it to stand out.",
+    "second": "You want an experience that’s",
+    "third": "elegant, eye-catching,",
+    "fourth": "seamless"
+  },
+  "Developer": {
+    "first": "Performant Development",
+    "second": "Our software solutions are fully tested and approved before going into production. We offer robust codebases developed by Ctlst to provide robust, efficient, and scalable software solutions.",
+    "third": "WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance."
+  },
+  "Design": {
+    "first": "Superior Design",
+    "second": "With beautiful design, clear layouts, logical workflows, and responsive interactions, we make tasks easier and faster to complete.",
+    "bullet1": "Boost user retention and engagement.",
+    "bullet2": "Improve productivity and user satisfaction.",
+    "bullet3": "Less guidance leading to less support overhead."
+  },
+  "Services": {
+    "first": "Our Services",
+    "second": "Hover over the options to see details.",
+    "third": "Tell me more",
+    "card1": {
+      "subHeader": "Beautiful, reliable, and ready to use",
+      "description": "Build your ideal app by selecting from a marketplace of pre-built microservices—complete with UI and backend logic. Choose only what you need, integrate seamlessly, and pay less with our discounted modular pricing."
+    },
+    "card2": {
+      "subHeader": "Unique, efficient, and scalable",
+      "description": "On-demand software development that is efficient, scalable, and tailored to your specific industry. Whether you’re looking to embrace digital transformation or optimize processes, we have the right solution for you."
+    },
+    "card3": {
+      "subHeader": "Eye-catching, confident, and accessible",
+      "description": "Stunning interface designs that blend aesthetics, functionality, and accessibility. Our premium experiences not only enhance retention and conversions but also elevate your brand’s confidence."
+    }
+  },
+  "Stack": {
+    "first": "Our Stack"
+  },
+  "Brands": {
+    "first": "Trusted by"
+  },
+  "keyPoints": {
+    "point1": {
+      "title": "Access",
+      "description": "Make use of our services in a variety of payment models and bundles, find the services that best suit your needs and pay only for what you use."
+    },
+    "point2": {
+      "title": "Optimize",
+      "description": "Speed up your processes with software that is performant and reliable. We build our services using cutting-edge software technologies."
+    },
+    "point3": {
+      "title": "Stand out",
+      "description": "Bring a satisfying experience to your customers with modern design and impressive user experience that boosts engagement and retention."
+    },
+    "button": "Tell Me More"
+  },
+  "Form": {
+    "first": "Let's connect",
+    "second": "Thank you",
+    "third": "Enter your email and we'll get in contact with you:",
+    "fourth": "Contact me",
+    "fifth": "Email sent! One of our agents will get in touch with you, have a wonderful day."
+  }
+}

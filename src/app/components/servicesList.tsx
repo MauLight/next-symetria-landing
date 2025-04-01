@@ -8,6 +8,7 @@ import useMeasure from 'react-use-measure'
 import { ModularAgent, randRange } from '../classes'
 import { CursorArrowRippleIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-scroll'
+import { useTranslations } from 'next-intl'
 
 const containerVariants = {
     initial: {},
@@ -35,34 +36,30 @@ const childUiVariants = {
     animate: { scaleX: 1, transition: { duration: 0.5 } }
 }
 
-const text = {
-    first: 'Our Services',
-    second: 'Hover over the options to see details.',
-    third: 'Tell me more'
-}
-
-const services = [
-    {
-        id: 'a1',
-        service: 'Modular Saas',
-        subHeader: 'Beautiful, reliable, and ready to use',
-        description: 'Build your ideal app by selecting from a marketplace of pre-built microservices—complete with UI and backend logic. Choose only what you need, integrate seamlessly, and pay less with our discounted modular pricing.'
-    },
-    {
-        id: 'b2',
-        service: 'Software Development',
-        subHeader: 'Unique, efficient, and scalable',
-        description: 'On-demand software development that is efficient, scalable, and tailored to your specific industry. Whether you’re looking to embrace digital transformation or optimize processes, we have the right solution for you.'
-    },
-    {
-        id: 'c3',
-        service: 'Ui/Ux Design',
-        subHeader: 'Eye-catching, confident, and accessible',
-        description: 'Stunning interface designs that blend aesthetics, functionality, and accessibility. Our premium experiences not only enhance retention and conversions but also elevate your brand’s confidence.'
-    },
-]
-
 export default function ServicesList() {
+
+    const text = useTranslations('Services')
+
+    const services = [
+        {
+            id: 'a1',
+            service: 'Modular Saas',
+            subHeader: text('card1.subHeader'),
+            description: text('card1.description')
+        },
+        {
+            id: 'b2',
+            service: 'Software Development',
+            subHeader: text('card2.subHeader'),
+            description: text('card2.description')
+        },
+        {
+            id: 'c3',
+            service: 'Ui/Ux Design',
+            subHeader: text('card3.subHeader'),
+            description: text('card3.description')
+        },
+    ]
 
     const [uiUxAnimate, setUiUxAnimate] = useState<string>('animate')
 
@@ -136,10 +133,10 @@ export default function ServicesList() {
     return (
         <div className="w-full md:h-screen flex flex-col justify-start items-center gap-y-20 max-md:px-5 max-md:pb-20">
             <div className="w-full max-w-[1440px]">
-                <h1 className={`max-md:w-full text-center md:text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>{text.first}</h1>
+                <h1 className={`max-md:w-full text-center md:text-start font-sym-title tracking-tighter antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem] capitalize`}>{text('first')}</h1>
                 <div className="flex max-md:justify-center items-center gap-x-2">
                     <CursorArrowRippleIcon className='w-5 h-5 text-green-500' />
-                    <p className='text-sym-text-secondary text-[1rem]'>{text.second}</p>
+                    <p className='text-sym-text-secondary text-[1rem]'>{text('second')}</p>
                 </div>
             </div>
             <div className="w-full md:h-1/2 max-w-[1440px] grid md:grid-cols-3 items-center max-md:gap-y-10 md:gap-x-10">
@@ -162,7 +159,7 @@ export default function ServicesList() {
                                     duration={1000}
                                     className="z-30"
                                 >
-                                    <button className='h-10 rounded-[6px] border border-green-500 group-hover:border-sym-text-primary px-4 group-hover:text-sym-text-primary text-green-500 cursor-pointer capitalize'>{text.third}</button>
+                                    <button className='h-10 rounded-[6px] border border-green-500 group-hover:border-sym-text-primary px-4 group-hover:text-sym-text-primary text-green-500 cursor-pointer capitalize'>{text('third')}</button>
                                 </Link>
 
 

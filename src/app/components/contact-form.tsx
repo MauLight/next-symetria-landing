@@ -8,6 +8,7 @@ import validator from 'validator'
 import Form from './form'
 import ErrorComponent from './ErrorComponent'
 import { Agent, randRange } from '../classes'
+import { useTranslations } from 'next-intl'
 
 const recaptchaSiteKey = process.env.NEXT_PUBLIC_GRECAPTCHA
 
@@ -23,6 +24,8 @@ declare global {
 }
 
 export default function ContactForm({ parent }: { parent: RectReadOnly }) {
+
+    const text = useTranslations('Form')
 
     const [email, setEmail] = useState<string>('')
     const [honeyPot, setHoneyPot] = useState<string>('')
@@ -164,7 +167,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                             !hasError && (
                                 <>
                                     <div className="px-8 pt-8">
-                                        <p className="text-lg text-sym-text-primary">{status === "idle" || status === "saving" ? "Let's Connect" : 'Thank you.'}</p>
+                                        <p className="text-lg text-sym-text-primary capitalize">{status === "idle" || status === "saving" ? text('first') : text('second')}</p>
                                     </div>
 
                                     <motion.div
@@ -186,7 +189,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                                                             className=""
                                                         >
                                                             <p className="text-sm text-sym-text-secondary">
-                                                                {`Enter your email and we'll get in contact with you:`}
+                                                                {text('third')}
                                                             </p>
                                                             <div className="mt-3">
                                                                 <input
@@ -206,7 +209,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                                                             </div>
                                                             <div className="mt-8 text-right">
                                                                 <Form.Button className="rounded bg-indigo-500 px-5 py-2 text-[1rem] text-sym-text-primary">
-                                                                    Contact me
+                                                                    {text('fourth')}
                                                                 </Form.Button>
                                                             </div>
                                                         </Form>
@@ -218,7 +221,7 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                                                         transition={{ ...transition, duration: 0.4, delay: 0.3 }}
                                                     >
                                                         <p className="p-8 text-sm text-zinc-400">
-                                                            Email sent! One of our agents will get in touch with you, have a wonderful day.
+                                                            {text('fifth')}
                                                         </p>
                                                     </motion.div>
                                                 )}
@@ -229,11 +232,6 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                             )
                         }
                     </div>
-
-                    <p className="mt-8 text-sm text-zinc-500">
-                        <span className="underline">Reach out</span> to us if you need more
-                        help.
-                    </p>
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full z-10 bg-radial from-transparent  to-black'></div>
                 <div className='absolute top-0 left-0 w-full h-full z-10 bg-radial from-transparent  to-black'></div>

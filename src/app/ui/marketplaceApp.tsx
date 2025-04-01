@@ -6,6 +6,7 @@ import IphoneCase from '../components/iphone-case'
 import MobileMenu from '../components/mobile-menu'
 import { animatedGradient, animatedGradientText } from '../styles'
 import { motion } from 'motion/react'
+import { useTranslations } from 'next-intl'
 
 const parentVariant = {
     hidden: { opacity: 0 },
@@ -23,30 +24,26 @@ const childVariants = {
     visible: { opacity: 1 }
 }
 
-const text = {
-    first: 'Superior Design',
-    second: 'With beautiful design, clear layouts, logical workflows, and responsive interactions, we make tasks easier and faster to complete.',
-    third: 'WordPress was great… in 2005. The future of the web is React & Next.js—trusted by the world’s top brands for speed, flexibility, and performance.'
-}
-
-const bulletPoints = [
-    {
-        id: 1,
-        text: 'Boost user retention and engagement.'
-    },
-    {
-        id: 2,
-        text: 'Improve productivity and user satisfaction.'
-    },
-    {
-        id: 3,
-        text: 'Less guidance leading to less support overhead.'
-    },
-]
-
 export default function MarketplaceApp() {
 
+    const text = useTranslations('Design')
+
     const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+
+    const bulletPoints = [
+        {
+            id: 1,
+            text: text('bullet1')
+        },
+        {
+            id: 2,
+            text: text('bullet2')
+        },
+        {
+            id: 3,
+            text: text('bullet3')
+        },
+    ]
 
     return (
         <>
@@ -59,8 +56,8 @@ export default function MarketplaceApp() {
                 <div className='w-full flex items-center'>
                     <div className='w-full h-[calc(735px/1.2)] flex flex-col gap-y-10 justify-start px-10'>
                         <div className='flex flex-col gap-y-2'>
-                            <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} text-[4rem]`}>{text.first}</h1>
-                            <p className='text-sym-text-secondary text-[1.3rem] text-balance'>{text.second}</p>
+                            <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} text-[4rem] capitalize`}>{text('first')}</h1>
+                            <p className='text-sym-text-secondary text-[1.3rem] text-balance'>{text('second')}</p>
                         </div>
 
                         <motion.ul
@@ -135,8 +132,8 @@ export default function MarketplaceApp() {
                 <div className='w-full flex items-center'>
                     <div className='w-full flex flex-col gap-y-10 justify-start px-10'>
                         <div className='flex flex-col items-center gap-y-2'>
-                            <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>{text.first}</h1>
-                            <p className='text-sym-text-secondary max-md:text-center text-[1rem] sm:text-[1.3rem] text-balance max-sm:pt-5'>{text.second}</p>
+                            <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem] capitalize`}>{text('first')}</h1>
+                            <p className='text-sym-text-secondary max-md:text-center text-[1rem] sm:text-[1.3rem] text-balance max-sm:pt-5'>{text('second')}</p>
                         </div>
 
                         <motion.ul

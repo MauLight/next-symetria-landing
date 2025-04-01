@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 const containerVariants = {
@@ -34,18 +35,17 @@ const stack = [
     },
 ]
 
-const text = {
-    first: 'Our Stack'
-}
-
 export default function StackList() {
+
+    const text = useTranslations('Stack')
+
     return (
         <motion.div
             variants={containerVariants}
             initial='hidden'
             animate='visible'
             className="w-full flex flex-col items-center gap-y-5">
-            <h1 className="text-[2rem] text-sym-text-primary">{text.first}</h1>
+            <h1 className="text-[2rem] text-sym-text-primary">{text('first')}</h1>
             <div className="w-full max-w-[700px] flex items-center justify-around">
                 {
                     stack.map((item) => (
