@@ -208,10 +208,10 @@ export default function ContactForm({ parent }: { parent: RectReadOnly }) {
                                                                 />
                                                             </div>
 
-                                                            <div className='text-sym-text-secondary mt-5 flex gap-x-2 items-center'>
+                                                            <div className='text-sym-text-secondary mt-4 flex gap-x-2 items-center'>
                                                                 <input type="checkbox" id="privacyConsent" name="privacyConsent" required />
-                                                                <label htmlFor="privacyConsent">
-                                                                    I agree to the <a className='text-indigo-500' href="/privacy-policy" target="_blank">privacy policy</a>
+                                                                <label className='text-[0.9rem]' htmlFor="privacyConsent">
+                                                                    I agree to the <a className='text-indigo-500 underline' href="/privacy-policy" target="_blank">privacy policy</a>
                                                                 </label>
                                                             </div>
 
