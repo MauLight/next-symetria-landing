@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { routing } from '@/src/i18n/routing'
 import { Metadata } from 'next'
 import '../globals.css'
+import Topbar from '../components/topbar'
 
 export const metadata: Metadata = {
   title: "Ctlst",
@@ -25,6 +26,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className='bg-black pb-22'>
+        <Topbar />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

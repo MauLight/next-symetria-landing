@@ -1,6 +1,91 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -10,6 +95,22 @@
   --color-sym-text-secondary: #a1a1a1;
 
   --font-sym-title: "Space Mono";
+}
+
+/* Hero section text */
+
+.text-hero {
+  @apply w-full max-sm:pb-2 font-sym-title text-[5rem] min-[400px]:text-[6rem] sm:text-[12rem] md:text-[15rem] lg:text-[22rem] max-sm:text-center leading-none tracking-tighter inline-block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+}
+
+.text-subheader {
+  @apply text-[1.3rem] md:text-[2.5rem] max-sm:leading-6 text-balance tracking-normal max-sm:text-center leading-5 sm:leading-8 text-sym-text-primary;
+}
+
+/* Common */
+
+.vignette {
+  @apply absolute top-0 left-0 w-full h-screen z-10 bg-radial from-transparent to-black;
 }
 
 .glass {

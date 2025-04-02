@@ -1,15 +1,15 @@
 'use client'
 
 import { useLayoutEffect } from "react"
-import Hero from "../ui/hero"
-import AwarenessText from "../ui/awareness-text"
-import DeveloperHub from "../ui/developerHub"
-import MarketplaceApp from "../ui/marketplaceApp"
+import Hero from "../sections/hero"
+import AwarenessText from "../sections/awareness-text"
+import DeveloperHub from "../sections/developerHub"
+import MarketplaceApp from "../sections/marketplaceApp"
 import ServicesList from "../components/servicesList"
 import StackList from "../components/stackList"
 import BrandsList from "../components/brandsList"
-import Home from "../ui/home"
-import KeyPoints from "../ui/key-points"
+import Home from "../sections/home"
+import KeyPoints from "../sections/key-points"
 
 export default function Page() {
 
