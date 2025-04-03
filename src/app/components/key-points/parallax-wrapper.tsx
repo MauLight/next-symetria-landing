@@ -1,9 +1,9 @@
 
 
 import React from 'react'
-import ParallaxText from '../components/parallaxText'
+import ParallaxText from '../parallaxText'
 
-export default function Techstack({ direction }: { direction: 'left' | 'right' }) {
+export default function ParallaxWrapper({ direction }: { direction: 'left' | 'right' }) {
     return (
         <div className=''>
             <div
