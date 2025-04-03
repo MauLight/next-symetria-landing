@@ -132,6 +132,18 @@ html {
   @apply w-[190px] text-sym-text-primary text-[0.6rem];
 }
 
+.text-form-header {
+  @apply text-[2rem] capitalize inline-block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+}
+
+.text-form-main {
+  @apply text-[1rem] text-sym-text-secondary;
+}
+
+.text-form-small {
+  @apply text-sym-text-secondary text-[0.9rem];
+}
+
 /* Common */
 
 .vignette {
