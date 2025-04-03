@@ -1,12 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-import IpadCase from '../components/ipad-case'
-import EmailClient from '../components/EmailClient'
-import { animatedGradientText } from '../styles'
-import { AnimatePresence, motion } from 'motion/react'
-import Multistep from '../components/Multistep'
 import { useTranslations } from 'next-intl'
+import { AnimatePresence, motion } from 'motion/react'
+
+//* Components
+import IpadCase from '../components/ipad-case'
+import Multistep from '../components/Multistep'
+import Wrapper from '../components/common/wrapper'
+import EmailClient from '../components/EmailClient'
+import ContentWrapper from '../components/common/content-wrapper'
 
 export default function DeveloperHub() {
 
@@ -16,8 +19,8 @@ export default function DeveloperHub() {
     const [sliderStep, setSliderStep] = useState<number>(1)
 
     return (
-        <section className="relative w-full flex justify-center overflow-hidden  max-md:px-5">
-            <div className="w-full max-w-[1440px] h-[1000px] py-20 flex justify-center items-start">
+        <Wrapper>
+            <ContentWrapper className='h-[1000px]'>
                 <IpadCase>
                     <AnimatePresence>
                         {
@@ -49,14 +52,17 @@ export default function DeveloperHub() {
                         }
                     </AnimatePresence>
                 </IpadCase>
-            </div>
-            <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[280px] bg-radial from-black from-30% to-transparent mdto-70%'>
+            </ContentWrapper>
+
+            {/* Text */}
+            <div className='absolute top-100 left-0 z-50 w-full h-full flex justify-center pt-[280px] bg-radial from-black from-30% to-transparent to-70%'>
                 <div className='max-md:w-full flex flex-col items-center gap-y-10 md:gap-y-2'>
-                    <h1 className={`font-sym-title tracking-tight antialiased ${animatedGradientText} max-sm:text-center text-[2rem] sm:text-[3rem] lg:text-[4rem]`}>{text('first')}</h1>
-                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] text-center text-balance w-full max-w-[900px] pt-5'>{text('second')}</p>
-                    <p className='text-sym-text-secondary text-[1rem] sm:text-[1.3rem] text-center text-balance w-full max-w-[900px]'>{text('third')}</p>
+                    <h1 className='text-title max-sm:text-center'>{text('first')}</h1>
+                    <div className="w-full max-w-[650px] flex flex-col items-center gap-y-2">
+                        <p className='text-body text-center'>{text('second')}</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </Wrapper>
     )
 }

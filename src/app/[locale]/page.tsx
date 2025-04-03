@@ -39,11 +39,8 @@ export default function Page() {
       <div className="h-[100px]"></div>
 
       {/* Superior design part */}
-      <section className="w-full flex justify-center">
-        <div className="w-full max-w-[1440px]">
-          <MarketplaceApp />
-        </div>
-      </section>
+
+      <MarketplaceApp />
 
       <div className="h-[100px]"></div>
 

@@ -17,7 +17,7 @@ export default function Hero() {
 
     return (
         <Wrapper>
-            <ContentWrapper>
+            <ContentWrapper className="min-h-screen">
 
                 {/* Main text */}
                 <div className='w-full col-span-1 sm:col-span-2'>
@@ -50,7 +50,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8, delay: 2.8 }}
                                 className="flex items-center gap-x-2 sm:pr-12 w-[528px]">
 
-                                <p className='text-[1rem] max-sm:text-center sm:text-[1.2rem] italic px-2 text-balance font-light leading-tight text-sym-text-secondary'>{text('third')}</p>
+                                <p className='text-body max-sm:text-center'>{text('third')}</p>
                             </motion.div>
                         </div>
                     </div>
